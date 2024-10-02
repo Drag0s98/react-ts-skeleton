@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "pre-commit": "pnpm run lint && pnpm run format"
   },
   "dependencies": {
     "react": "^18.3.1",
